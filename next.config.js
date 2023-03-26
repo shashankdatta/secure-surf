@@ -3,6 +3,9 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-}
+  images: {
+    domains: ["localhost", "upload.wikimedia.org", "ssurf.tech"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

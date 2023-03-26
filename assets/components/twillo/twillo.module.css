@@ -1,11 +1,10 @@
-.form {
-}
 .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin: 100px;
   grid-auto-rows: minmax(100px, auto);
+  align-items: center;
 }
 .input {
   border-radius: 3px;
@@ -19,5 +18,7 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.card {
+.heading {
+  grid-row: 1;
+  min-width: 50%;
 }
