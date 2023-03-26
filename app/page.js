@@ -1,25 +1,35 @@
+'use client';
+
 // next 13
 // beta.nextjs.org
 // lot of improvements since next 12
 // but 13 still has a bunch of bugs...
 
+import Head from "next/head";
+import Search from "../assets/components/search/search";
+import { ChakraProvider } from "@chakra-ui/react";
 
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main>
-    <div className={styles.main}>
-      <form action="/send-data-here" method="post">
-        <label for="user_input">Domain:</label>
-        <input type="text" id="first" name="first" />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-    </main>
+    <body className={styles.body}>
+      <ChakraProvider className={styles.ChakraProvider}>
+        <header>
+          <h1 className={styles.title}>Secure Surf</h1>
+            <p className={styles.description}>
+              Please enter a domain name to get a Secure Surf Score.
+            </p>
+        </header>
+        <div className={styles.content}>
+            <Head>
+              <title>Secure Surf</title>
+              <link rel="icon" href="/favicon.ico" />
+            </Head>
+
+            <Search />
+        </div>
+      </ChakraProvider>
+    </body>
   )
 }
