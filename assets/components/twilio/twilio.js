@@ -1,5 +1,5 @@
 import { Input, Button, InputGroup, InputLeftElement } from "@chakra-ui/react";
-import styles from "./twillo.module.css";
+import styles from "./twilio.module.css";
 import axios from "axios";
 
 const Twilio = ({ message }) => {

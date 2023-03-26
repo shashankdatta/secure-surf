@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./search.module.css";
 import Card from "../card/card";
 import axios from "axios";
-import Twilio from "../twillo/twillo";
+import Twilio from "../twilio/twilio";
 
 function Search() {
   const [result, setResult] = useState(" ");
