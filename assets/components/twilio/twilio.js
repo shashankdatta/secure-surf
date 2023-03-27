@@ -2,7 +2,7 @@ import { Input, Button, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import styles from "./twilio.module.css";
 import axios from "axios";
 
-const Twilio = ({ message }) => {
+const Twilio = ({ message1, message2 }) => {
   const handleSend = async (e) => {
     e.preventDefault();
 
@@ -16,7 +16,7 @@ const Twilio = ({ message }) => {
     const res = await axios.get("/api/twilio", {
       params: {
         phone: `${phoneStripped}`,
-        message: `${message}`,
+        message: `Information:\n${message2}\n\nScore:\n${message1}`,
       },
     });
 
