@@ -7,6 +7,18 @@
   align-items: center;
 }
 
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.coverImage {
+  border-radius: 50%;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
 .content {
   font-size: 20px;
   text-align: center;

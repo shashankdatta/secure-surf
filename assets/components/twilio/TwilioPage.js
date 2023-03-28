@@ -1,8 +1,8 @@
 import { Input, Button, InputGroup, InputLeftElement } from "@chakra-ui/react";
-import styles from "./twilio.module.css";
+import styles from "./TwilioPage.module.css";
 import axios from "axios";
 
-const Twilio = ({ message1, message2 }) => {
+const TwilioPage = ({ score, info }) => {
   const handleSend = async (e) => {
     e.preventDefault();
 
@@ -16,15 +16,19 @@ const Twilio = ({ message1, message2 }) => {
     const res = await axios.get("/api/twilio", {
       params: {
         phone: `${phoneStripped}`,
-        message: `Information:\n${message2}\n\nScore:\n${message1}`,
+        message: `Information:\n${info}\n\nScore:\n${score}`,
       },
     });
 
-    const data = await res.data;
+    const responseData = await res.data;
 
-    alert("Message Sent!");
-    document.getElementById("t-form").reset();
-    return data;
+    if (responseData.status == 400) {
+      alert(
+        "Twilio Server Error! SMS cannot be sent at this time. Please try again later."
+      );
+    } else {
+      alert("Message Sent!");
+    }
   };
 
   return (
@@ -62,4 +66,4 @@ const Twilio = ({ message1, message2 }) => {
   );
 };
 
-export default Twilio;
+export default TwilioPage;

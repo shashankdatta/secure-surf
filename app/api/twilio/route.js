@@ -9,14 +9,22 @@ export async function GET(request) {
 
   const client = require("twilio")(accountSid, authToken);
 
-  client.messages
-    .create({
-      body: message,
-      from: process.env.TWILIO_PHONE_NUMBER,
-      messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
-      to: phone,
-    })
-    .then((mes) => console.log(mes.sid));
+  try {
+    client.messages
+      .create({
+        body: message,
+        from: process.env.TWILIO_PHONE_NUMBER,
+        messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
+        to: phone,
+      })
+      .then((mes) => {
+        console.log(`Message SID (String Identifier): ${mes.sid}`);
+      });
+  } catch (err) {
+    return new Response("Twilio Server Error!", {
+      status: 400,
+    });
+  }
 
   return new Response("Message Sent!", {
     status: 200,
