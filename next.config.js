@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  experimental: {}, /* deleted appDr: true, not recognzied by current version of Next.js  */
   images: {
     domains: ["localhost", "upload.wikimedia.org", "ssurf.tech"],
   },
