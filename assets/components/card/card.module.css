@@ -19,6 +19,13 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   grid-row: 1;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadow */
+  transition: 0.3s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+  transform: scale(1.01); /* Slightly scale up the card */
 }
 
 .card label {
@@ -30,4 +37,11 @@
   margin: 10px;
   padding: 20px;
   grid-row: 1;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-basis: 90%; /* Take more width on smaller screens */
+    margin: 1rem; /* Adjust margin for smaller screens */
+  }
 }
