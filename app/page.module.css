@@ -1,3 +1,23 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -24,6 +44,13 @@
   text-align: center;
 }
 
+.title {
+  margin: 1rem 0;
+  line-height: 1.15;
+  font-size: 3.6rem;
+  text-align: center;
+}
+
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -35,24 +62,9 @@
   text-decoration: underline;
 }
 
-.title {
-  margin: 0 0 1rem;
-  line-height: 1.15;
-  font-size: 3.6rem;
-}
-
-.title {
-  text-align: center;
-}
-
 .title,
 .description {
   text-align: center;
-}
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
 }
 
 .grid {
