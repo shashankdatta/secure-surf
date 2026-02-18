@@ -44,3 +44,6 @@ I think we learned a lot about how useful and powerful a well trained GPT model 
 
 ## What's next for Secure Surf
 In order to verify and make sure that the score we provided is more accurate, we want to integrate results from the Have I Been Pwned API into the score generator. This will also allow for redundancy in the cases where the GPT 3.5 Turbo model has not been trained. We would also like to deploy our web app on Vercel so that it can be accessed by anyone online. Due to time constraints we were not able to deploy it on our domain.com registered domain: [ssurf.tech](ssurf.tech).
+
+## Links
+[Devpost](https://devpost.com/software/secure-surf)
